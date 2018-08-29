@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<h1>Grand Circus Coffee Shop</h1>
+<br/>
+<a href="/Home/RegisterUser">Register Here!</a>
+<br/>
+<div  class="panel panel-group">
+    <div class="panel-default">
+        <div style="border-color:aqua; background-color:lightseagreen" class="panel panel-heading">items</div>
+        @foreach (var item in ViewBag.Items)
+        {   <div style="background-color:lightcoral"class="panel panel-default col-md-3">
+            <label>Item Name:</label><p>@item.name</p>
+            <label>Description:</label><p>@item.description</p>
+            <label>Quantity:</label><p>@item.quantity</p>
+            <label>Price:</label><p>$@item.price</p>
+            </div>
+        }
+    </div>
+</div>
